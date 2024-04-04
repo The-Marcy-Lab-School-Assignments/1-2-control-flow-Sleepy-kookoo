@@ -20,13 +20,13 @@ const funkoPopAddictionLevel = (numOfFunkoPops) => {
     console.log('You need an intervention!!!');
   }
 };
-funkoPopAddictionLevel(0)
-funkoPopAddictionLevel(1)
-funkoPopAddictionLevel(10)
-funkoPopAddictionLevel(11)
-funkoPopAddictionLevel(20)
-funkoPopAddictionLevel(21)
-funkoPopAddictionLevel(30)
+// funkoPopAddictionLevel(0)
+// funkoPopAddictionLevel(1)
+// funkoPopAddictionLevel(10)
+// funkoPopAddictionLevel(11)
+// funkoPopAddictionLevel(20)
+// funkoPopAddictionLevel(21)
+// funkoPopAddictionLevel(30)
 
 //I think we have to switch the signs to < for this problem 
 const getWeatherReport = (temperature) => {
@@ -58,13 +58,24 @@ const getWeatherReport = (temperature) => {
 const returnPositiveNegativeZero = (num) => {
   if (num === 0) {
     return "Zero"
+  } else if (num < 0) {
+    return "Negative"
+  } else if (num > 0) {
+    return "Positive"
   }
-  return num < 0 ? "Negative" : "Positive"
-  //return num < 0 ? "Negative" : "Positive"
-  // : num === 0
-  //   ? "Zero"
-  //   : "Negative";
 };
+
+// console.log(returnPositiveNegativeZero(0))
+// console.log(returnPositiveNegativeZero(1))
+// console.log(returnPositiveNegativeZero(2))
+// console.log(returnPositiveNegativeZero(-1))
+// console.log(returnPositiveNegativeZero(-2))
+//return num < 0 ? "Negative" : "Positive" (THIS IS A TERNARY)
+//return num < 0 ? "Negative" : "Positive"
+// : num === 0
+//   ? "Zero"
+//   : "Negative";
+
 // current idea; it is trying to return 0 as positive and negative? 
 // num < 0 && num > 0
 module.exports = {

@@ -2,27 +2,31 @@ const getRandomIntInRange = (min, max) => {
   if (min > max) throw new Error("min must be less than max");
   return Math.floor(Math.random() * (max - min) + min);
 };
-console.log(getRandomIntInRange(3, 10))
+//console.log(getRandomIntInRange(3, 10))
 const coolnessGauge = (numOfFridges) => {
-  return numOfFridges > 5 ? 'You need more fridges.' : 'You are downright chilly!';
+  return numOfFridges >= 4 ? 'You are downright chilly!' : 'You need more fridges.';
 };
 
 const funkoPopAddictionLevel = (numOfFunkoPops) => {
   if (numOfFunkoPops === 0) {
     console.log('No pops? Maybe try one.');
-  } else if (numOfFunkoPops > 1) {
+  } else if (numOfFunkoPops <= 10) {
     console.log('Only a few? Keep having fun!');
-  } else if (numOfFunkoPops > 10) {
+  } else if (numOfFunkoPops > 10 && numOfFunkoPops <= 20) {
     console.log('You have a problem.');
-  } else if (numOfFunkoPops > 20) {
+  } else if (numOfFunkoPops > 20 && numOfFunkoPops <= 30) {
     console.log('You need help!');
   } else {
     console.log('You need an intervention!!!');
   }
 };
-//funkoPopAddictionLevel(2)
-//funkoPopAddictionLevel(10)
-//funkoPopAddictionLevel(30)
+funkoPopAddictionLevel(0)
+funkoPopAddictionLevel(1)
+funkoPopAddictionLevel(10)
+funkoPopAddictionLevel(11)
+funkoPopAddictionLevel(20)
+funkoPopAddictionLevel(21)
+funkoPopAddictionLevel(30)
 
 //I think we have to switch the signs to < for this problem 
 const getWeatherReport = (temperature) => {
@@ -34,10 +38,14 @@ const getWeatherReport = (temperature) => {
   } else if (temperature < 32) {
     weatherReport = "Wow, it's cold out.";
   }
-  return weatherReport + "And that's your report!"
+  console.log(weatherReport)
+  return "And that's your report!"
 };
 
 //console.log(getWeatherReport(92))
+//console.log(getWeatherReport(10))
+//console.log(getWeatherReport(75))
+
 // instead of console.log(And thats your report) include it in the return function
 // We have to make sure it does not have const inside the if statements
 // we would just console.log the string no need for const .. 

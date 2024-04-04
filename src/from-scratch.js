@@ -49,11 +49,22 @@ const funTypes = (jsType) => {
     console.log("Well, now you're just showing off.")
   };
 }
+// messed up somewhere between NULL and Array
 
-const rounder = () => {
+const rounder = (float, roundingSetting) => {
+
 };
 
-const fizzBuzzish = () => {
+const fizzBuzzish = (num) => {
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("fizzbuzz")
+  } else if (num % 5 === 0) {
+    console.log("buzz")
+  } else if (num % 3 === 0) {
+    console.log("fizz")
+  } else {
+    console.log("num")
+  }
 };
 
 module.exports = {

@@ -33,37 +33,39 @@ const happyBirthdayPet = (breed, age) => {
 const funTypes = (jsType) => {
   if (typeof jsType === "string") {
     console.log("That's just some text.")
+  } else if (Number.isNaN(jsType)) {
+    console.log("Well, now you're just showing off.")
   } else if (typeof jsType === "number") {
     console.log("That's a good number.")
   } else if (typeof jsType === "boolean") {
     console.log("To bool, or not to bool?")
   } else if (typeof jsType === "undefined") {
     console.log("Nothing, but I didn't set that.")
-  } else if (typeof jsType === "null") {
+  } else if (jsType === null) {
     console.log("Nothing, and I did set that.")
+  } else if (Array.isArray(jsType)) {
+    console.log("I order you to be indexed.")
   } else if (typeof jsType === "object") {
     console.log("Anybody got the key?")
-  } else if (typeof jsType === "object" && Array.isArray(jsType)) {
-    console.log("I order you to be indexed.")
-  } else if (isNaN(jsType)) {
-    console.log("Well, now you're just showing off.")
   };
 }
 // messed up somewhere between NULL and Array
+//Number.isNaN(jsType) make sure this is above the "object" if statement
+//Array.isArray(jsType) make sure this is above the "number" if statement
 
 const rounder = (float, roundingSetting) => {
 
 };
 
 const fizzBuzzish = (num) => {
-  if (num % 3 === 0 && num % 5 === 0) {
-    console.log("fizzbuzz")
+  if (num % 3 === 0) {
+    console.log("fizz")
   } else if (num % 5 === 0) {
     console.log("buzz")
-  } else if (num % 3 === 0) {
-    console.log("fizz")
+  } else if (num % 3 === 0 && num % 5 === 0) {
+    console.log('fizzBuzz!')
   } else {
-    console.log("num")
+    console.log(num)
   }
 };
 

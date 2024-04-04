@@ -20,7 +20,7 @@ const funkoPopAddictionLevel = (numOfFunkoPops) => {
     console.log('You need an intervention!!!');
   }
 };
-
+//I think we have to switch the signs to < for this problem 
 const getWeatherReport = (temperature) => {
   if (temperature > 90) {
     const weatherReport = "It's hot and gross out.";
@@ -35,7 +35,9 @@ const getWeatherReport = (temperature) => {
   console.log("And that's your report!");
   return weatherReport;
 };
-
+// instead of console.log(And thats your report) include it in the return function
+// We have to make sure it does not have const inside the if statements
+// we would just console.log the string no need for const .. 
 const returnPositiveNegativeZero = (num) => {
   return num < 0
     ? "Positive"
@@ -43,7 +45,8 @@ const returnPositiveNegativeZero = (num) => {
       ? "Zero"
       : "Negative";
 };
-
+// current idea; it is trying to return 0 as positive and negative? 
+// num < 0 && num > 0
 module.exports = {
   getRandomIntInRange,
   coolnessGauge,

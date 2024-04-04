@@ -54,8 +54,24 @@ const funTypes = (jsType) => {
 //Array.isArray(jsType) make sure this is above the "number" if statement
 
 const rounder = (float, roundingSetting) => {
-
+  if (roundingSetting === 'up') {
+    return Math.ceil(float)
+  } else if (roundingSetting === 'down') {
+    return Math.floor(float)
+  } else if (roundingSetting === 'honest') {
+    return Math.round(float)
+  }
 };
+rounder(1, 'up')
+//rounder(1.1, 'up')
+// rounder(3.9, 'up')
+// rounder(1.9, 'down')
+// rounder(5.0, 'down')
+// rounder(5.1, 'down')
+// rounder(1.9, 'honest')
+// rounder(1.5, 'honest')
+// rounder(1.4, 'honest')
+// rounder(1.0, 'honest')
 
 const fizzBuzzish = (num) => {
   if (num % 3 === 0 && num % 5 === 0) {
@@ -68,10 +84,10 @@ const fizzBuzzish = (num) => {
     console.log(num)
   }
 };
-fizzBuzzish(3)
-fizzBuzzish(5)
-fizzBuzzish(15)
-fizzBuzzish(2)
+//fizzBuzzish(3)
+//fizzBuzzish(5)
+//fizzBuzzish(15)
+//fizzBuzzish(2)
 
 module.exports = {
   measureRain,

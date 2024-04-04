@@ -33,13 +33,19 @@ const getWeatherReport = (temperature) => {
   let weatherReport = ""
   if (temperature > 90) {
     weatherReport = "It's hot and gross out.";
+    console.log(weatherReport)
   } else if (temperature > 70) {
     weatherReport = "At least it's a dry heat.";
+    console.log(weatherReport)
+  } else if (temperature >= 32 && temperature <= 70) {
+    weatherReport = "It's not too bad!"
+    console.log(weatherReport)
   } else if (temperature < 32) {
     weatherReport = "Wow, it's cold out.";
+    console.log(weatherReport)
   }
-  console.log(weatherReport)
-  return "And that's your report!"
+  console.log("And that's your report!")
+  return weatherReport
 };
 
 //console.log(getWeatherReport(92))

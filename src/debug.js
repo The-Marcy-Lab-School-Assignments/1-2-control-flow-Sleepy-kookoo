@@ -10,7 +10,7 @@ const coolnessGauge = (numOfFridges) => {
 const funkoPopAddictionLevel = (numOfFunkoPops) => {
   if (numOfFunkoPops === 0) {
     console.log('No pops? Maybe try one.');
-  } else if (numOfFunkoPops >= 1) {
+  } else if (numOfFunkoPops > 1) {
     console.log('Only a few? Keep having fun!');
   } else if (numOfFunkoPops > 10) {
     console.log('You have a problem.');
@@ -20,21 +20,24 @@ const funkoPopAddictionLevel = (numOfFunkoPops) => {
     console.log('You need an intervention!!!');
   }
 };
+//funkoPopAddictionLevel(2)
+//funkoPopAddictionLevel(10)
+//funkoPopAddictionLevel(30)
+
 //I think we have to switch the signs to < for this problem 
 const getWeatherReport = (temperature) => {
+  let weatherReport = ""
   if (temperature > 90) {
-    const weatherReport = "It's hot and gross out.";
-    console.log(weatherReport);
+    weatherReport = "It's hot and gross out.";
   } else if (temperature > 70) {
-    const weatherReport = "At least it's a dry heat.";
-    console.log(weatherReport);
+    weatherReport = "At least it's a dry heat.";
   } else if (temperature < 32) {
-    const weatherReport = "Wow, it's cold out.";
-    console.log(weatherReport);
+    weatherReport = "Wow, it's cold out.";
   }
-  console.log("And that's your report!");
-  return weatherReport;
+  return weatherReport + "And that's your report!"
 };
+
+console.log(getWeatherReport(92))
 // instead of console.log(And thats your report) include it in the return function
 // We have to make sure it does not have const inside the if statements
 // we would just console.log the string no need for const .. 

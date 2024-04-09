@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job getting all test cases to pass! You did it and it looks so good! */
 const measureRain = (inches) => {
   if (inches === 0) {
     console.log('drought')

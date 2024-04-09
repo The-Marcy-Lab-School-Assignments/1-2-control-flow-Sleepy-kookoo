@@ -55,6 +55,13 @@ const getWeatherReport = (temperature) => {
 // instead of console.log(And thats your report) include it in the return function
 // We have to make sure it does not have const inside the if statements
 // we would just console.log the string no need for const .. 
+
+/** FEEDBACK: Great use of conditionals here, you could've also used a ternary here. Your code would then look like this: 
+const returnPositiveNegativeZero = (num) => {
+  if (num === 0) return 'Zero';
+  return (num < 1) ? 'Negative' : 'Positive';
+};
+ */
 const returnPositiveNegativeZero = (num) => {
   if (num === 0) {
     return "Zero"
